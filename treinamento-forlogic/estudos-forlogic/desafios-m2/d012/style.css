@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'PassionOne';
+    src: url('fontes/PassionOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url('fontes/Sriracha-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cabeçalho {
+    background-color: black;
+    height: 230px;
+    width: 100%;
+    align-items: center;
+    box-shadow: 2px 2px 20px black;
+}
+
+.cabeçalho h1 {
+    font-family: 'PassionOne';
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 60px;
+}
+
+.cabeçalho p{
+    color: white;
+    text-align: center;
+    font-family: 'PassionOne';
+}
+
+.poema {
+    display: flex;
+    flex-direction: column;
+}
+
+.poema-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 550px;
+}
+
+.poema-box p {
+    font-family: 'Sriracha';
+    width: 250px;
+    margin-left: 100px;
+    padding: 30px;
+    font-size: 18px;
+    
+}
+
+.parallax {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    /* The image used */
+    background-image: url('imagens/background001.jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px 1px green;
+  }
+
+.parallax p {
+    color: white;
+    background-image: linear-gradient(to left, rgba(0, 128, 0, 0.086), rgba(2, 255, 2, 0.147));
+    height: 220px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+.parallax2 {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    /* The image used */
+    background-image: url('imagens/background002.jpg');
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 10px 1px black;
+
+  }
+
+.parallax2 p {
+    color: white;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.59));
+    height: 220px;
+    box-shadow: 2px 2px 10px black;
+}

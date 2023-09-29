@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Imagem flexivel</h1>
+    <p>Acha que a imagem nao é flexivel? tente mexer o tamanho de sua janela :P</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="paisagem/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="paisagem/paisagem-m.png" type="image/png">
+        <img src="paisagem/paisagem-g.png" alt="Imagem flexível">
+    </picture>
+</body>
+</html>
