@@ -21,7 +21,7 @@ nav{
 
 nav img {
     width: 50px;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid transparent;
     border-radius: 50%;
     transition: 0.5s;
@@ -30,6 +30,7 @@ nav img {
 nav img:hover{
     border: 1px solid white;
     transform: translate(-5px, -5px);
+    transition: 0.5s;
 }
 
 main{
@@ -39,9 +40,12 @@ main{
 
 .celular {
     position: relative;
-    overflow: hidden;
     display: block;
     margin: auto;
+}
+
+.celular::-webkit-scrollbar {
+    display: none;
 }
 .celular > img{
     height: 70vh;
@@ -56,8 +60,13 @@ iframe {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 52vh;
+    height: 53vh;
     margin-top: 29vh;
-    width: 85%;
-    margin-left: 6%;
+    width: 86%;
+    margin-left: 7%;
+
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
 }
