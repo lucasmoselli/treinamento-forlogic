@@ -12,6 +12,8 @@ body{
     color: white;
     background-size: 500%;
     background-position: bottom left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     animation: gradiente-body 5s infinite alternate;
 
 }
