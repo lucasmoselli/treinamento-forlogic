@@ -133,3 +133,9 @@ footer{
     font-family: 'Sriracha';
     box-shadow: 0 0 15px 1px black;
 }
+
+@media screen and (min-width: 1000px) {
+    .poema-box p {
+      font-size: 26px;
+    }
+  }

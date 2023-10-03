@@ -1,0 +1,91 @@
+@media screen and (min-width: 768px){
+
+    body {
+        background-image: linear-gradient(to bottom, purple, darkgreen);
+    }
+
+    main {
+        display: flex;
+        width: 750px;
+        height: 300px;
+    }
+    
+    .img {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 18px;
+        height: 100%;
+        width: 35%;
+    }
+
+    .login{
+        width: 92%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+
+    body {
+        background-image: linear-gradient(to bottom, purple, darkgreen);
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 990px;
+    }
+
+    .img {
+        width: 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+
+    .resto  {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    
+    
+    body {
+        background-image: linear-gradient(to bottom, purple, darkgreen);
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1200px;
+        height: 350px;
+    }
+
+    .img {
+        width: 50%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 18px;
+        border-top-right-radius: 18px;
+    }
+
+    .resto  {
+        width: 50%;
+    }
+
+    .resto > h1 {
+        margin-bottom: 10px;
+    }
+
+    .caixa-login {
+        margin-bottom: 20px;
+    }
+
+    .login {
+        width: 94%;
+    }
+    .submit {
+        margin-bottom: 20px;
+    }
+}

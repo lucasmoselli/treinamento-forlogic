@@ -1,20 +1,21 @@
 :root {
     --gradiente : linear-gradient(25deg, #009fb5 0, #009fc6 3.33%, #009ed6 6.67%, #009de4 10%, #009bf0 13.33%, #0099fa 16.67%, #0096ff 20%, #0092ff 23.33%, #008eff 26.67%, #0088ff 30%, #0082ff 33.33%, #367bff 36.67%, #6d73fc 40%, #8f6af2 43.33%, #a960e6 46.67%, #be55d8 50%, #cf4ac9 53.33%, #dd3fb8 56.67%, #e834a7 60%, #f02b95 63.33%, #f52684 66.67%, #f72772 70%, #f72d60 73.33%, #f4354f 76.67%, #ef403e 80%, #e94a2d 83.33%, #e05419 86.67%, #d65e00 90%, #cb6700 93.33%, #be7000 96.67%, #b17700 100%);
-    --gradiente2 : linear-gradient(25deg, transparent 0, #8f6af2 70%, #a960e6 80%, #be55d8 90%, #cf4ac9 100%);
+    --gradiente2 : linear-gradient(25deg, transparent 0, blue 25%, rgb(0, 0, 150) 75%, rgb(0, 0, 95) 100%);
 }
 
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     height: 100vh;
     width: 100%;
     background-image: var(--gradiente);
     color: white;
-    background-size: 500%;
+    background-size: 700%;
     background-position: bottom left;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: gradiente-body 5s infinite alternate;
+    animation: gradiente-body 15s infinite alternate;
+    overflow-x: hidden;
 
 }
 
@@ -75,6 +76,7 @@ main {
 .about-me p{
     margin-right: 20px;
     width: 50%;
+    text-align: justify;
 }
 
 .desafios {
@@ -88,7 +90,7 @@ main {
 }
 .desafios h2 {
     background-image: linear-gradient(to bottom,rgba(0, 81, 139, 0.671), rgba(0, 0, 255, 0));
-    width: 60%;
+    width: 80%;
     height: 40px;
     border-radius: 10px;
     padding: 0;
@@ -121,15 +123,18 @@ main {
     height: 50px;
     margin-right: 20px;
     margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: -10px;
     box-shadow: 2px 2px 20px 2px black;
     overflow: hidden;
     list-style: none;
     border-radius: 20px;
     background-image: var(--gradiente2);
     color: white;
-    background-size: 1000%;
+    background-size: 2000%;
     background-position: bottom left;
-    transition: background-position 1s;
+    transition: background-position 1.5s;
+    font-weight: bold;
 }
 
 .desafios ul a li:hover{
@@ -144,3 +149,27 @@ main {
     text-align: center;
 }
 
+@media screen and (max-width: 900px){
+    body {
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .about-me {
+        margin-bottom: 50px;
+        width: 85%;
+    }
+
+    .desafios {
+        margin-bottom: 50px;
+        width: 85%;
+    }
+    
+    .desafios > h2 {
+        width: 80%;
+    }
+}
