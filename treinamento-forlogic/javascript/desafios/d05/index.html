@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio de conversão!!</h1>
+    <input id="botao" type="button" value="Insira um valor">
+    <div id="conversoes">Resultados</div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+        var conversoes = window.document.getElementById('conversoes')
+
+        function calcular(){
+            var valor = Number(window.prompt('Digite um valor em metros(m)'))
+            var milimetros = valor * 1000
+            var centimetros = valor * 100
+            var decimetros = valor * 10
+            var decametro = valor / 10
+            var hectometro = valor / 100
+            var kilometro = valor / 1000
+
+            conversoes.innerHTML = `<p>${kilometro} quilometros (Km)</p><p>${hectometro} hectometros (Hm)</p><p>${decametro} decametros (Dam)</p><p>${decimetros} decimetros (dm)</p><p>${centimetros} centimetros(cm)</p><p>${milimetros} milimetros (mm)</p>`
+        }
+
+    </script>
+</body>
+</html>

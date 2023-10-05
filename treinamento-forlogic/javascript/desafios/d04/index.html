@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de troco!!!</h1>
+    <input id="botao" type="button" value="Comprar produto">
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+
+        function calcular() {
+            var produto = window.prompt('Qual produtov vc esta comprando?')
+
+            var preço = Number(window.prompt(`Quanto custa ${produto} que vc esta comprando?`))
+
+            var dinheiro = Number(window.prompt(`Qual é o valor que vc usara para pagar o produto ${produto}`))
+
+
+            var troco = dinheiro - preço
+            var a = troco.toLocaleString('pt-BR',{style:'currency', currency: 'BRL'})
+            var b = dinheiro.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})
+            var c = preço.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})
+
+            window.alert(`Voce comprou ${produto} por ${c}. Deu ${b} em dinheiro e vai receber ${a} de troco. Volte sempre!`)
+        }
+    </script>
+</body>
+</html>

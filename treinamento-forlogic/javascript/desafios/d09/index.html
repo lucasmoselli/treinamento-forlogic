@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+     </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <input id="botao" type="button" value="reajustar salario">
+    <div id="texto">sim</div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+        var texto = window.document.getElementById('texto')
+
+        function calcular() {
+            var nome = window.prompt('Digite seu nome')
+            var salario = Number(window.prompt(`Qual é o salario de ${nome}`))
+            var reajuste = Number(window.prompt(`O salario de ${nome} sera reajustado em qual porcentagem?`))
+
+            var calcularReajuste = reajuste / 100
+            var valorReajustado = salario * calcularReajuste
+
+            var novoSalario = salario + valorReajustado
+            
+            var salarioR = salario.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+            var valorReajustadoR = valorReajustado.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+            var novoSalarioR = novoSalario.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+
+            texto.innerHTML = `<h2>${nome} recebeu um aumento salarial!!</h2><p>O salario atual era ${salarioR}</p><p>Com um aumento de ${reajuste}%, o salario vai aumentar ${valorReajustadoR} no próximo mes</p><p>E a partir dai, ${nome} vai ganhar ${novoSalarioR}</p>`
+        }
+    </script>
+</body>
+</html>

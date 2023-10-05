@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+    <input id="botao" type="button" value="Converter">
+    <div id="conversao">Clique no botao acima para iniciar</div>
+    <script>
+        var cotaçao = Number(window.prompt('Digite a cotação do dolar agora!!'))
+
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+        var conversao = window.document.getElementById('conversao')
+
+        function calcular () {
+            var dinheiro = Number(window.prompt('Quantos R$ vctem na teste carteira agora?'))
+
+            var dolar = dinheiro / cotaçao
+
+            var real = dinheiro.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})
+            var dolar2 = dolar.toLocaleString('pt-BR', {style:'currency', currency: 'USD'})
+
+            conversao.innerHTML = `<p>Com ${real} reais e com a cotação a ${cotaçao}, vc conseguiria ${dolar2} dolares!!!</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+
+        #delta{
+            background-color: yellow;
+            color: black;
+        }
+     </style>
+</head>
+<body>
+    <h1>Resolvendo bhaskara</h1>
+    <input id="botao" type="button" value="Calcular">
+    <div id="texto"></div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+        var texto = window.document.getElementById('texto')
+
+        function calcular(){
+            var a = Number(window.prompt("Qual o valor de a?"))
+            var b = Number(window.prompt("Qual o valor de b?"))
+            var c = Number(window.prompt("Qual o valor de c?"))
+
+            var delta = (b**2) - (4 * a * c)
+
+            texto.innerHTML = `<h2>Resolvendo bhaskara</h2><p>A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong></p><p>O calculo realizado será <strong>Delta = ${b}² - 4 . ${a} . ${c}</strong></p><p>O valor calculado foi <strong id="delta">Delta = ${delta}</strong></p>`
+        }
+    </script>
+</body>
+</html>

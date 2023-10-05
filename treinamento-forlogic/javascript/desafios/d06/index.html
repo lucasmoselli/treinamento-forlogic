@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de temperatura!!! (quente novamente?)</h1>
+
+    <input id="botao" type="button" value="Converter">
+    <div id = "conversao">Resultados</div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', calcular)
+        var conversao = window.document.getElementById('conversao')
+
+        function calcular(){
+            var temperaturaC = Number(window.prompt('Digite a temperatura em Celcius(°C)'))
+            
+            var temperaturaK = temperaturaC + 273
+            var temperaturaF = temperaturaC * 1.8 + 32
+
+            conversao.innerHTML = `<h2>A temperatura de ${temperaturaC}°C, corresponde a...</h2><p>Temperatura em Kelvin: ${temperaturaK}'K</p><p>Temperatura em Fahrenheit: ${temperaturaF}°F</p>`
+        }
+    </script>
+</body>
+</html>

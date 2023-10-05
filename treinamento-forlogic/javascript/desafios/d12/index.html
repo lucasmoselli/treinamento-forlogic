@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+        </style>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <input id ="botao" type="button" value="Verificar">
+    <div id = "texto">Clique em cima para verificar!!</div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', verificar)
+        var texto = window.document.getElementById('texto')
+
+        function verificar(){
+            var antes = Number(window.prompt("Qual era o preço anterior do produto?"))
+            var depois = Number(window.prompt("Qual é o preço atual do produto?"))
+
+            var antesR = antes.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+            var depoisR = depois.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+
+            var diferença = 0
+            var porcentagem = 0
+            if((depois-antes) >= 0) {
+
+                diferença = depois - antes
+                porcentagem = ((diferença*100)/antes).toFixed(2)
+
+                var diferençaR = diferença.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+
+                texto.innerHTML = `<h2>Analisando os valores informados</h2><p>O produto custava ${antesR} e agora custa ${depoisR}</p><p>Hoje o produto esta mais caro</p><p>O preço aumentou ${diferençaR} em relação ao preço anterior</p><p>Uma variação de %${porcentagem} pra cima.</p>`
+
+
+            }else{
+
+                diferença = antes - depois;
+                porcentagem = ((diferença*(100))/depois).toFixed(2)
+        
+                var diferençaR = diferença.toLocaleString('pt-BR', {style:'currency', currency:'BRL'})
+
+                texto.innerHTML = `<h2>Analisando os valores informados</h2><p>O produto custava ${antesR} e agora custa ${depoisR}</p><p>Hoje o produto esta mais barato</p><p>O preço diminuiu ${diferençaR} em relação ao preço anterior</p><p>Uma variação de %${porcentagem} pra baixo.</p>`
+            }
+        }
+    </script>
+</body>
+</html>

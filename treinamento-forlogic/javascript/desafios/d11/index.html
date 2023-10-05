@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, black, white);
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+
+        }
+
+        #falso {
+            background-color: darkred;
+            color: black;
+        }
+
+        #verdadeiro {
+            background-color: lightgreen;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ano bissexto</h1>
+    <input id="botao" type="button" value="Verificar">
+    <div id="texto">Digite um ano acima para ver se ele é bissexto!!</div>
+
+    <script>
+        var botao = window.document.getElementById('botao').addEventListener('click', verificar)
+        var texto = window.document.getElementById('texto')
+
+        function verificar(){
+            var ano = Number(window.prompt("Qual é o ano que vc quer verificar?"))
+            if((ano % 4 ) != 0){
+                texto.innerHTML = `<h2>Analisando o ano de ${ano}</h2><p>O ano de ${ano}  <strong id = "falso">NAO É BISSEXTO</strong> &#x274C;</p>`
+            }else {
+                texto.innerHTML = `<h2>Analisando o ano de ${ano}</h2><p>O ano de ${ano}  <strong id = "verdadeiro" > É BISSEXTO</strong> &#x2714; &#xFE0F</p>`
+            }
+        }
+    </script>
+</body>
+</html>
