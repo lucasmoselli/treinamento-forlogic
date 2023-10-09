@@ -1,5 +1,5 @@
 :root {
-    --gradiente : linear-gradient(25deg, #009fb5 0, #009fc6 3.33%, #009ed6 6.67%, #009de4 10%, #009bf0 13.33%, #0099fa 16.67%, #0096ff 20%, #0092ff 23.33%, #008eff 26.67%, #0088ff 30%, #0082ff 33.33%, #367bff 36.67%, #6d73fc 40%, #8f6af2 43.33%, #a960e6 46.67%, #be55d8 50%, #cf4ac9 53.33%, #dd3fb8 56.67%, #e834a7 60%, #f02b95 63.33%, #f52684 66.67%, #f72772 70%, #f72d60 73.33%, #f4354f 76.67%, #ef403e 80%, #e94a2d 83.33%, #e05419 86.67%, #d65e00 90%, #cb6700 93.33%, #be7000 96.67%, #b17700 100%);
+    --gradiente : linear-gradient(25deg, #009fb5 0, #009fc6 3.33%, #009ed6 6.67%, #009de4 10%, #009bf0 13.33%, #0099fa 16.67%, #0096ff 20%, #0092ff 23.33%, #008eff 26.67%, #0088ff 30%, #0082ff 33.33%, #367bff 36.67%, #6d73fc 40%, #8f6af2 43.33%, #a960e6 46.67%, #be55d8 50%, #cf4ac9 53.33%, #dd3fb8 56.67%, #e834a7 60%, #f02b95 63.33%, #f52684 66.67%, #f72772 70%, #f72d60 73.33%, #f4354f 76.87%, #ef403e 100%);
     --gradiente2 : linear-gradient(25deg, transparent 0, blue 25%, rgb(0, 0, 150) 75%, rgb(0, 0, 95) 100%);
 }
 
@@ -7,7 +7,7 @@ body{
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-image: var(--gradiente);
     color: white;
     background-size: 700%;
@@ -151,6 +151,8 @@ main {
 
 @media screen and (max-width: 900px){
     body {
+        width: 95vw;
+        height: 100vh;
     }
     main {
         display: flex;
