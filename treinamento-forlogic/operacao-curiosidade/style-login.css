@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    height: 543px;
+    width: 569px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.oc-logo {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 163px;
+    height: 163px;
+    text-align: center;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+}
+
+.oc-logo h1 {
+    padding-top: 45px;
+    font-size: 40px;
+}
+
+.oc-logo p {
+    font-size: 13px;
+}
+
+.login>form {
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+
+}
+
+.login>form>.input-login {
+    margin-bottom: 30px;
+    height: 45px;
+    border: 2px solid black;
+    padding-left: 20px;
+}
+
+.entrar-btn{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border-color: black;
+}
+
