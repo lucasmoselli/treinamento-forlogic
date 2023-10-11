@@ -1,7 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
+
 
 body {
     width: 100%;
@@ -17,8 +19,8 @@ body {
 }
 
 nav{
-    width: 421px;
-    height: 100vh;
+    width: 422px;
+    height: 150%;
     border-right: 2px solid #e5e5e5;
     background-color: white;
 }
@@ -124,113 +126,129 @@ header > input {
     height: 30px;
 }
 
-.principal-conteudo {
-   
-}
-
-.cards {
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    margin-top: 30px;
-    width: 100%;
-    height: 30%;
-    
-}
-
-.cards > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    width: 30%;
-    height: 200px;
-    text-align: right;
-}
-
-.cards > div > h1 {
-    justify-content: center;
-    text-align: center;
-    font-size: 64px;
-    font-weight: 400;
-    transform: translate(0, 50px);
-    
-}
-
-.cards > div > span {
-    margin: 10px;
-    color: gray
-}
-
-.card1 {
-    color: blue;
-    box-shadow: 1px 1px 2px 1px gray;
-}
-
-.card2 {
-    color: green;
-    box-shadow: 1px 1px 2px 1px gray;
-}
-
-.card3 {
-    color: red;
-    box-shadow: 1px 1px 2px 1px gray;
-}
-
-.cadastros{
-    margin: auto;
-    width: 97%;
-    height: 380px;
-    margin-top: 30px;
-    background-color: white;
-    box-shadow: 1px 1px 2px 1px gray;
-}
-
-.cadastros > h3 {
-    color: grey;
-    padding-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-}
-
-.cadastros > div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.cadastros > hr {
-    margin: auto;
-    width: 92%;
-    border: 1px solid #E7E7E7;
-}
-
-.cadastros > div > p {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 20%;
-}
-
-.cadastros-label {
-    color: gray;
-    margin-bottom: 10px;
-}
-
-.cadastros-value {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.status {
-    text-align: center;
-}
-
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 1,
     'wght' 400,
     'GRAD' 0,
     'opsz' 24
+}
+
+.cadastro {
+    background-color: white;
+    margin: auto;
+    width: 97%;
+    margin-top: 30px;
+    height: 98%;
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+.cadastro > h3 {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.cadastro-title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cadastro-title > h3 {
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cadastro-title > input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cadastro-dados {
+    margin: auto;
+    width: 97%;
+    border-top: 1px solid #c7c7c7;
+    margin-top: 10px;
+
+}
+
+.cadastro-dados label {
+    color: gray;
+}
+
+.cadastro-dados > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-dados > form:nth-child(1) {
+    margin-top: 20px;
+}
+
+.cadastro-dados > form > input {
+    margin-bottom: 20px;
+    height: 30px;
+    background-color: #F5F5F5;
+    border: 1px solid #c7c7c7
+}
+
+.cadastro-idade-email {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cadastro-idade-email > .idade-display {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.cadastro-idade-email > .email-display {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 40px;
+}
+
+.cadastro-idade-email > div > .idade {
+    background-color: #F5F5F5;
+    border: 1px solid #c7c7c7;
+    height: 30px;
+    width: 100%;
+
+}
+
+.cadastro-idade-email > div>.email {
+    background-color: #F5F5F5;
+    border: 1px solid #c7c7c7;
+    height: 30px;
+    width: 100%;
+}
+
+.cadastro-idade-email > label {
+    margin-right: 13px;
+
+}
+
+.cadastro-info {
+    margin: auto;
+    width: 97%;
+    border-top: 1px solid #c7c7c7;
+    margin-top: 10px;
+
+}
+
+.cadastro-info > input {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #F5F5F5;
+    border: 1px solid #c7c7c7;
+    height: 130px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 850px){
