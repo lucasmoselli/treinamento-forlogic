@@ -29,12 +29,13 @@ nav{
     display: flex;
     align-items: center;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 85%;
     height: 60px;
     background-color: #EFF4FC;
     margin-bottom: 30px;
     font-size: 13px;
+    box-shadow: 2px 2px 2px 2px #d9e8ff;
 }
 
 .home-logo>span {
@@ -56,6 +57,7 @@ nav{
 .nav-links > a > span {
     margin-right: 10px;
     color: gray;
+    margin-left: 10px;
 }
 
 .nav-links > a {
@@ -67,6 +69,7 @@ nav{
 nav > hr{
     width: 85%;
     border: 1px solid #E7E7E7;
+    margin-left: 10px;
 }
 
 .principal {
@@ -146,6 +149,7 @@ header > input {
 .cadastro > h3 {
     margin-left: 15px;
     margin-bottom: 5px;
+    margin-left: 20px;
 }
 
 .cadastro-title {
@@ -159,6 +163,7 @@ header > input {
     color: gray;
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 .cadastro-title > input {
