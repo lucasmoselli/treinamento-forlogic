@@ -12,14 +12,20 @@
             <div class="oc-logo"><h1>OC</h1>
                 <p>Operação Curiosidade</p>
             </div>
-            <form action="post">
-                <input class="input-login" type="email" placeholder="Email" name="" id="">
-                <input class ="input-login" type="password" placeholder="Senha" name="" id="">
-                <a href="home.html">
-                <input class="entrar-btn" type="button" value="Entrar">
-                </a>
+            <form action="" name="form" id="form">
+                <div class="input-control">
+                    <input class="input-login" type="email" placeholder="Email" name="email" id="email">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <input class ="input-login" type="password" placeholder="Senha" name="senha" id="senha">
+                    <div class="error"></div>
+                </div>
+                <button class="entrar-btn" type="submit">Entrar</button>
             </form>
+            <div class="register">Não possui uma conta? <strong><a href="registrar.html">Registre-se!</a></strong></div>
         </main>
     </div>
+    <script src="javascript/script-login.js"></script>
 </body>
 </html>

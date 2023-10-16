@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-registrar.css">
+    <title>Registrar-se</title>
+</head>
+<body>
+    <main class="wrapper">
+        <div class="registrar">
+            <div class="oc-logo"><h1>OC</h1>
+                <p>Operação Curiosidade</p>
+            </div>
+            <h1>Dados do Cadastro</h1>
+            <form action="" name="form" id="form">
+                <div class="input-control">
+                    <label for="nome">Nome Completo</label>
+                    <input class="input-login" type="text" name="nome" id="nome">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input class="input-login" type="email"  name="email" id="email">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Senha</label>
+                    <input class="input-login" type="password" name="password" id="password">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="cPassword">Confirmar Senha</label>
+                    <input class="input-login" type="password"  name="cPassword" id="cPassword">
+                    <div class="error"></div>
+                </div>
+                <button class="registrar-btn" type="submit">Registrar</button>
+            </form>
+        </div>
+    </main>
+    <script src="javascript/script-registrar.js"></script>
+</body>
+</html>

@@ -85,7 +85,7 @@ header{
     height: 62px;
     background-color: #EDEDED;
     margin-top: 20px;
-    box-shadow: 1px 1px 2px 1px gray;
+    box-shadow: 0 0 2px 1px gray;
 }
 
 header > input {
@@ -135,7 +135,7 @@ header > input {
     background-color: white;
     width: 97%;
     margin-top: 30px;
-    box-shadow: 1px 1px 2px 1px gray;
+    box-shadow: 0 0 2px 1px gray;
 }
 
 .cadastrados > h3 {
@@ -183,14 +183,37 @@ header > input {
     'opsz' 24
 }
 
+.bx-menu {
+    display: none;
+}
+
+.nav-header {
+    display: none;
+}
+
 @media screen and (max-width: 850px){
+    .wrapper {
+        width: 100%;
+    }
+
     nav {
         display: none;
     }
+    
+    header {
+        margin: auto;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-header{
+        margin: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
 
     .principal {
-        margin: auto;
-        width: 97%;
+        width: 100%;
         margin-top: 0;
     }
 
@@ -198,5 +221,39 @@ header > input {
         margin-left: 10px;
         margin-right: 10px;
         width: 23%;
+    }
+
+    .bx-menu {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+
+    .bx-menu > span {
+        font-size: 40px;
+        color: gray;
+    }
+
+    .perfil {
+        margin-left: 60px;
+    }
+
+    .nav-header {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: -100%;
+        height: 17vh;
+        width: 150px;
+        z-index: 2;
+        border-radius: 20px;
+        transition: all .5s ease;
+        background-color: #EDEDED;
+        box-shadow: 0px 0px 5px 2px gray;
+
+    }
+
+    .nav-header.open {
+        left: 4%;
     }
 }

@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body{
     width: 100%;
     height: 100vh;
@@ -26,21 +27,26 @@ body{
 		background-position: 0% 50%;
 	}
 }
+
 .wrapper {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    
+    align-items: center;
 }
 
-.login {
-    height: 543px;
-    width: 569px;
-    border: 2px solid black;
+.registrar {
+    min-width: 500px;
+    width: 50%;
+    height: 700px;
     background-color: white;
-    box-shadow: 1px 1px 5px 1px black;
+    box-shadow: 0 0 2px 2px black;
+}
+
+.registrar > h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .oc-logo {
@@ -64,38 +70,47 @@ body{
     font-size: 13px;
 }
 
-.login>form {
-
+.input-control {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 70%;
-
+    justify-content: center;
+    
 }
 
-.login>form>.input-control>.input-login {
-    margin-bottom: 30px;
-    height: 45px;
-    padding-left: 20px;
-    width: 94%;
+.input-control input {
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 17px;
+    padding-left: 10px;
 }
 
-.entrar-btn{
-    width: 100%;
-    height: 45px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    border-color: black;
+.input-control input:nth-last-child(1){
+    margin-bottom: 100px;
+}
+
+.input-control label {
+    width: 20%;
+    text-align: right;
+    transform: translate(0, 20px);
+    margin-right: 10px;
 }
 
 .input-control input:focus {
     outline: 0;
 }
 
-input.control input {
-    border: 2px solid black
+.registrar-btn{
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 450px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border-color: black;
+    margin-top: 50px;
 }
 
 .input-control.success input {
@@ -107,19 +122,9 @@ input.control input {
 }
 
 .input-control .error {
+    position: absolute;
     color: #ff3860;
-    font-size: 12px;
+    font-size: 15px;
     height: 13px;
-    transform: translate(0, -23px)
-}
-
-.register {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.register a {
-    text-decoration: none;
-    color: black;
+    transform: translate(0, 23px)
 }
