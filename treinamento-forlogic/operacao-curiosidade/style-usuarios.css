@@ -10,13 +10,13 @@ body {
     background-color: #F5F5F5;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-nav{
+nav {
     width: 420px;
     height: 100vh;
     border-right: 2px solid #e5e5e5;
@@ -44,7 +44,7 @@ nav{
 }
 
 
-.nav-links{
+.nav-links {
     display: flex;
     align-items: center;
     margin-left: 10px;
@@ -52,20 +52,20 @@ nav{
     margin-bottom: 10px;
 }
 
-.nav-links > a > span {
+.nav-links>a>span {
     margin-right: 10px;
     color: gray;
     margin-left: 10px;
 }
 
-.nav-links > a {
+.nav-links>a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: black;
 }
 
-nav > hr{
+nav>hr {
     width: 85%;
     border: 1px solid #E7E7E7;
     margin-left: 10px;
@@ -76,7 +76,7 @@ nav > hr{
     background-color: #F5F5F5;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,7 +88,7 @@ header{
     box-shadow: 0 0 2px 1px gray;
 }
 
-header > input {
+header>input {
     width: 40%;
     height: 28px;
     margin-left: 10px;
@@ -111,11 +111,11 @@ header > input {
     transition: 0.5s;
 }
 
-.fakeimg:hover{
+.fakeimg:hover {
     border-radius: 10px;
 }
 
-.perfil > a {
+.perfil>a {
     display: flex;
     align-items: center;
     text-align: center;
@@ -130,13 +130,20 @@ header > input {
 
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }
 
-.cadastros{
+.cadastros>h3 {
+    color: grey;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.cadastros {
     margin: auto;
     width: 97%;
     height: 600px;
@@ -145,32 +152,69 @@ header > input {
     box-shadow: 0 0 2px 1px gray;
 }
 
-.cadastros > div > h3 {
+.cadastros>div>h3 {
     color: grey;
     padding-top: 30px;
     margin-left: 30px;
     margin-bottom: 30px;
 }
 
-.cadastros > div {
+.cadastros-label {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.cadastros>.cadastro-lista>div {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    background-color: white;
+    transition: 0.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
 }
 
-.cadastros > hr {
+.cadastros>.cadastro-lista {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+}
+
+.cadastros>.cadastros-value:hover {
+    background-color: #EFF4FC;
+}
+
+.cadastros>hr {
     margin: auto;
     width: 92%;
     border: 1px solid #E7E7E7;
 }
 
-.cadastros > div > p {
-    margin-left: 50px;
-    margin-right: 50px;
+.cadastros>.cadastro-lista>div>p {
+    margin-left: 25px;
+    margin-right: 25px;
     width: 20%;
-
 }
+
+.cadastros>.cadastro-lista>div>p:last-child {
+
+    text-align: right;
+}
+
+.cadastro-lista>hr {
+    display: block;
+    margin: auto;
+    width: 96%;
+    border: 1px solid #E7E7E7;
+}
+
 .cadastro-btn-label {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
@@ -209,7 +253,7 @@ header > input {
     display: none;
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
     .wrapper {
         width: 100%;
     }
@@ -228,18 +272,20 @@ header > input {
         width: 100%;
         justify-content: flex-start;
     }
-    .cadastros > div > p {
+
+    .cadastros>div>p {
         margin-left: 10px;
         margin-right: 10px;
         width: 23%;
     }
+
     .bx-menu {
         display: block;
         cursor: pointer;
         margin-left: 20px;
     }
 
-    .bx-menu > span {
+    .bx-menu>span {
         font-size: 40px;
         color: gray;
     }
@@ -258,7 +304,7 @@ header > input {
         z-index: 2;
         border-radius: 20px;
         transition: all .5s ease;
-        background-color: #EDEDED ;
+        background-color: #EDEDED;
         box-shadow: 0px 0px 5px 2px gray;
 
     }

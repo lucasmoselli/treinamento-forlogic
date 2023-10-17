@@ -19,7 +19,7 @@ form.addEventListener('submit', e => {
 
 
     validateInputs();
-    if(nomeValido && emailValido && senhaValida && senha2Valida) {
+    if (nomeValido && emailValido && senhaValida && senha2Valida) {
         console.log(listaUsuarios)
         cadastrar()
         setTimeout(() => {
@@ -59,47 +59,47 @@ const validateInputs = () => {
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
 
-    if(usernameValue === '') {
+    if (usernameValue === '') {
         setError(username, 'Username is required');
     } else {
         setSuccess(username);
         nomeValido = true;
     }
 
-    if(emailValue === '') {
+    if (emailValue === '') {
         setError(email, 'Email is required');
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
     } else {
-       
-        for(var i = 0; i < listaUsuarios.length; i++){ 
-            if (listaUsuarios.length == 0){
+
+        for (var i = 0; i <= listaUsuarios.length; i++) {
+            if (listaUsuarios.length == 0) {
                 setSuccess(email)
                 emailValido = true
                 console.log('teste')
             }
 
-            else if(emailValue == listaUsuarios[i].emailCad) {  
+            else if (emailValue == listaUsuarios[i].emailCad) {
                 console.log('teste ')
                 setError(email, 'Esse email ja esta cadastrado')
                 break;
             }
-            else{
+            else {
                 setSuccess(email)
                 emailValido = true
             }
         }
     }
-    if(passwordValue === '') {
+    if (passwordValue === '') {
         setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
+    } else if (passwordValue.length < 8) {
         setError(password, 'Password must be at least 8 character.')
     } else {
         setSuccess(password);
         senhaValida = true;
     }
 
-    if(password2Value === '') {
+    if (password2Value === '') {
         setError(password2, 'Please confirm your password');
     } else if (password2Value !== passwordValue) {
         setError(password2, "Passwords doesn't match");
@@ -107,7 +107,7 @@ const validateInputs = () => {
         setSuccess(password2);
         senha2Valida = true
     }
-    
+
 };
 
 console.log(listaUsuarios)
@@ -120,7 +120,7 @@ function cadastrar() {
         emailCad: email.value,
         senhaCad: password.value
     })
-    
+
     localStorage.setItem('listausuario', JSON.stringify(listaUsuarios))
 
 }

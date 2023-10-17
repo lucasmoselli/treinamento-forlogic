@@ -36,7 +36,7 @@ form.addEventListener('submit', e => {
 
     validateInputs();
 
-    if(nomeValido && emailValido) {
+    if (nomeValido && emailValido) {
         console.log('teste')
         cadastrar()
         setTimeout(() => {
@@ -81,69 +81,69 @@ const validateInputs = () => {
 
     console.log()
 
-    if(usernameValue === '') {
+    if (usernameValue === '') {
         setError(nome, 'Nome é um campo obrigatório!');
     } else {
         setSuccess(nome);
-        nomeValido=true
+        nomeValido = true
     }
-    
+
     console.log(listaCadastrados)
-    if(emailValue === '') {
+    if (emailValue === '') {
         setError(email, 'E-mail é um campo obrigatório!');
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Digite um e-mail válido!');
     } else {
-        for(var i = 0; i < listaCadastrados.length; i++){ 
-            if (listaCadastrados.length == 0){
+        for (var i = 0; i < listaCadastrados.length; i++) {
+            if (listaCadastrados.length == 0) {
                 setSuccess(email)
                 emailValido = true
             }
 
-            else if(emailValue == listaCadastrados[i].emailCad) {  
+            else if (emailValue == listaCadastrados[i].emailCad) {
                 setError(email, 'Esse email já esta cadastrado!')
                 break;
             }
-            else{
+            else {
                 setSuccess(email)
                 emailValido = true
             }
         }
     }
-    if(idadeValue === '') {
+    if (idadeValue === '') {
         setError(idade, 'Idade é um campo obrigatório!');
-    } else if (idadeValue.value  > 18 && idadeValue.value < 100 ) {
+    } else if (idadeValue.value > 18 && idadeValue.value < 100) {
         setError(idade, 'Idade entre 18 e 100 anos!')
     } else {
         setSuccess(idade);
     }
 
-    if(enderecoValue === '') {
+    if (enderecoValue === '') {
         setError(endereco, 'Endereço é um campo obrigatório!');
     } else {
         setSuccess(endereco);
     }
-    
-    if(outrasValue === '') {
+
+    if (outrasValue === '') {
         setError(outras, 'Outras informações é um campo obrigatório!');
     } else {
         setSuccess(outras);
     }
 
-    if(interessesValue === '') {
+    if (interessesValue === '') {
         setError(interesses, 'Interesses é um campo obrigatório!');
     } else {
         setSuccess(interesses);
     }
 
-    if(sentimentosValue === '') {
+    if (sentimentosValue === '') {
         console.log(sentimentosValue === '')
         setError(sentimentos, 'Sentimentos é um campo obrigatório!');
     } else {
         setSuccess(sentimentos);
     }
 
-    if(valoresValue === '') {
+    if (valoresValue === '') {
         setError(valores, 'Valores é um campo obrigatório!');
     } else {
         setSuccess(valores);
@@ -164,7 +164,7 @@ function cadastrar() {
         valoresCad: valores.value
 
     })
-    
+
     localStorage.setItem('listacadastrados', JSON.stringify(listaCadastrados))
 
 }
