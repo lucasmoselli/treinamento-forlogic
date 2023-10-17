@@ -43,10 +43,7 @@
                     </div>
                 </div>
                 <input type="text" placeholder="Pesquisar..." name="" id="">
-                <div class="perfil">
-                    <div class="fakeimg"></div>
-                    <p>Nome</p>
-                    <a href="login.html">Sair</a>
+                <div class="perfil"  id="perfil">
                 </div>
             </header>
             <main>
@@ -56,32 +53,59 @@
                     </div>
                     <h3>1º Fatos e dados</h3>
                     <div class="cadastro-dados">
-                        <form action="" method="post">
-                            <label for="">Nome</label><input type="text" name="" id="">
+                        <form action="" method="post" id="form">
+                            <div class="input-control">
+                                <label for="nome">Nome</label><input type="text" name="nome" id="nome">
+                                <div class="error"></div>
+                            </div>
                             <div class="cadastro-idade-email">
                                 <div class="idade-display">
-                                    <label for="">Idade</label><input class="idade" type="text" name="" id="">
+                                    <div class="input-control">
+                                        <label for="idade">Idade</label><input class="idade" type="text" name="idade" id="idade">
+                                        <div class="error"></div>
+                                    </div>
                                 </div>
                                 <div class="email-display">
-                                    <label for="">E-mail</label><input class="email" type="email" name="" id="">
+                                    <div class="input-control">
+                                        <label for="email">E-mail</label><input class="email" type="email" name="email" id="email">
+                                        <div class="error"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <label for="">Endereço</label><input type="text" name="" id="">
-                            <label for="">Outras informações</label><input type="text" name="" id="">
-                        </form>
+                            <div class="input-control">
+                                <label for="endereco">Endereço</label><input type="text" name="endereco" id="endereco">
+                                <div class="error"></div>
+                            </div>
+                            <div class="input-control">
+                                <label for="outras">Outras informações</label><input type="text" name="outras" id="outras">
+                                <div class="error"></div>
+                            </div>
                     </div>
                     <h3>2º Interesses</h3>
-                    <div class="cadastro-info">
-                        <input type="text" name="" id="">
+                    <div class="input-control">
+                        <div class="cadastro-info">
+                            <textarea rows="4" cols="50" id="interesses"></textarea>
+                            <div class="error"></div>
+                        </div>
                     </div>
                     <h3>3º Sentimentos</h3>
-                    <div class="cadastro-info">
-                        <input type="text" name="" id="">
+                    <div class="input-control">
+                        <div class="cadastro-info">
+                            <textarea rows="4" cols="50" id="sentimentos"></textarea>
+                            <div class="error"></div>
+                        </div>
                     </div>
                     <h3>4º Valores</h3>
-                    <div class="cadastro-info">
-                        <input type="text" name="" id="">
+                    <div class="input-control">
+                        <div class="cadastro-info">
+                            <textarea rows="4" cols="50" id="valores"></textarea>
+                            <div class="error"></div>
+                        </div>
                     </div>
+                    <div class="botao">
+                        <button class="registrar-btn" type="submit">Enviar</button>
+                    </div>
+                </form>
                 </div>
             </main>
         </div>
