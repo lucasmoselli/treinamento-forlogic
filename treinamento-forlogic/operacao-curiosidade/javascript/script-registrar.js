@@ -3,6 +3,8 @@ const username = document.getElementById('nome');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('cPassword');
+const inputFoto = document.getElementById('input-foto')
+const foto = document.getElementById('foto')
 var nomeValido = false;
 var emailValido = false;
 var senhaValida = false;
@@ -10,6 +12,17 @@ var senha2Valida = false;
 var emailCad = ""
 var nomeCompletoCad = ""
 var senhaCad = ""
+var fotoCad = foto.value
+
+// Foto
+inputFoto.onchange = evt => {
+    const [file] = inputFoto.files
+    if (file) {
+      foto.src = URL.createObjectURL(file)
+      console.log(foto.src)
+    }
+  }
+
 
 let listaUsuarios = JSON.parse(localStorage.getItem("listausuario") || '[]')
 //let listaUsuarios = JSON.parse(localStorage.getItem('listaUsuario') || '[]')
@@ -20,7 +33,6 @@ form.addEventListener('submit', e => {
 
     validateInputs();
     if (nomeValido && emailValido && senhaValida && senha2Valida) {
-        console.log(listaUsuarios)
         cadastrar()
         setTimeout(() => {
             window.location.href = "./login.html"
@@ -51,7 +63,6 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 }
 
-console.log('teste')
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
@@ -72,7 +83,7 @@ const validateInputs = () => {
         setError(email, 'Provide a valid email address');
     } else {
 
-        for (var i = 0; i <= listaUsuarios.length; i++) {
+        for (var i = 0; i < listaUsuarios.length; i++) {
             if (listaUsuarios.length == 0) {
                 setSuccess(email)
                 emailValido = true
@@ -118,7 +129,8 @@ function cadastrar() {
     listaUsuarios.push({
         nomeCompletoCad: username.value,
         emailCad: email.value,
-        senhaCad: password.value
+        senhaCad: password.value,
+        fotoCad: foto.src
     })
 
     localStorage.setItem('listausuario', JSON.stringify(listaUsuarios))

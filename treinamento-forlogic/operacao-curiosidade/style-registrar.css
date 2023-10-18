@@ -46,13 +46,13 @@ body{
 
 .registrar > h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .oc-logo {
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     width: 163px;
     height: 163px;
     text-align: center;
@@ -70,6 +70,39 @@ body{
     font-size: 13px;
 }
 
+#foto{
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    margin-top: 20px;
+
+}
+
+#input-foto {
+    display: none;
+}
+
+.input-control label {
+    width: 20%;
+    text-align: right;
+    transform: translate(0, 20px);
+    margin-right: 10px;
+}
+
+
+.input-control >.label-foto {
+    height: 30px;
+    background-color: black;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+    width: 268px;
+    padding-top: 15px;
+
+
+}
+
 .input-control {
     display: flex;
     justify-content: center;
@@ -85,15 +118,9 @@ body{
 }
 
 .input-control input:nth-last-child(1){
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
-.input-control label {
-    width: 20%;
-    text-align: right;
-    transform: translate(0, 20px);
-    margin-right: 10px;
-}
 
 .input-control input:focus {
     outline: 0;
@@ -110,7 +137,7 @@ body{
     border-radius: 5px;
     font-weight: bold;
     border-color: black;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .input-control.success input {

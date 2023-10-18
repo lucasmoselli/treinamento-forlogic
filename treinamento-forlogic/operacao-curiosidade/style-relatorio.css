@@ -76,7 +76,7 @@ nav > hr{
     background-color: #F5F5F5;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,8 +88,9 @@ header{
     box-shadow: 0 0 2px 1px gray;
 }
 
-header > input {
+header>input {
     width: 40%;
+    min-width: 100px;
     height: 28px;
     margin-left: 10px;
     background-color: #F5F5F5;
@@ -100,23 +101,24 @@ header > input {
 .perfil {
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .fakeimg {
     background-color: darkgray;
     width: 43px;
+    min-width: 43px;
     height: 43px;
     border-radius: 50%;
     margin-right: 15px;
     transition: 0.5s;
 }
 
-.fakeimg:hover{
+.fakeimg:hover {
     border-radius: 10px;
 }
 
-
-.perfil > a {
+.perfil>a {
     display: flex;
     align-items: center;
     text-align: center;
@@ -129,6 +131,9 @@ header > input {
     height: 30px;
 }
 
+.perfil>p {
+    min-width: 100px;
+}
 .cadastrados {
     margin: auto;
     height: 600px;
@@ -235,7 +240,14 @@ header > input {
     }
 
     .perfil {
-        margin-left: 60px;
+        margin-left: 30px;
+    }
+
+    
+    .perfil > a {
+        margin-left: 10px;
+        padding-left:  7px;
+        margin-right: 30px;
     }
 
     .nav-header {

@@ -20,10 +20,27 @@ menu.onclick = () => {
 }
 
 for (var i = 0; i < listaCadastrados.length; i++) {
-    cadastroLista.innerHTML += `<div class="cadastros-value">
-                                <p>${listaCadastrados[i].nomeCompletoCad}</p>
-                                <p>${listaCadastrados[i].emailCad}</p>
-                                <p class = "status">Ativo</p>
-                            </div>
-                            <hr>`
+    if (listaCadastrados[i].ativoCad == "true"){
+        console.log('testee')
+        cadastroLista.innerHTML += `<div class="cadastros-value">
+                                        <p>${listaCadastrados[i].nomeCompletoCad}</p>
+                                        <p>${listaCadastrados[i].emailCad}</p>
+                                        <p class = "status-ativo">Ativo</p>
+                                    </div>
+                                     <hr>`
+    } else if (listaCadastrados[i].ativoCad == "false") {
+        cadastroLista.innerHTML += `<div class="cadastros-value">
+                                        <p>${listaCadastrados[i].nomeCompletoCad}</p>
+                                        <p>${listaCadastrados[i].emailCad}</p>
+                                        <p class = "status-inativo">Inativo</p>
+                                    </div>
+                                    <hr>`
+    } else {
+        cadastroLista.innerHTML += `<div class="cadastros-value">
+                                        <p>${listaCadastrados[i].nomeCompletoCad}</p>
+                                        <p>${listaCadastrados[i].emailCad}</p>
+                                         <p class = "status-ativo">Ativo</p>
+                                    </div>
+                                    <hr>`
+    }
 }

@@ -3,22 +3,26 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F5F5F5;
 }
 
 .wrapper {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
 }
 
 nav {
     width: 420px;
-    height: 100vh;
+    min-height: 100vh;
     border-right: 2px solid #e5e5e5;
     background-color: white;
 }
@@ -90,6 +94,7 @@ header {
 
 header>input {
     width: 40%;
+    min-width: 100px;
     height: 28px;
     margin-left: 10px;
     background-color: #F5F5F5;
@@ -100,11 +105,13 @@ header>input {
 .perfil {
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .fakeimg {
     background-color: darkgray;
     width: 43px;
+    min-width: 43px;
     height: 43px;
     border-radius: 50%;
     margin-right: 15px;
@@ -128,12 +135,20 @@ header>input {
     height: 30px;
 }
 
+.perfil>p {
+    min-width: 100px;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 1,
         'wght' 400,
         'GRAD' 0,
         'opsz' 24
+}
+
+main {
+    margin-bottom: 30px;
 }
 
 .cadastros>h3 {
@@ -146,7 +161,8 @@ header>input {
 .cadastros {
     margin: auto;
     width: 97%;
-    height: 600px;
+    min-height: 600px;
+    height: 100%;
     margin-top: 30px;
     background-color: white;
     box-shadow: 0 0 2px 1px gray;
@@ -180,11 +196,11 @@ header>input {
 .cadastros>.cadastro-lista {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 93%;
     margin: auto;
 }
 
-.cadastros>.cadastros-value:hover {
+.cadastros>.cadastro-lista>div:hover {
     background-color: #EFF4FC;
 }
 
@@ -208,7 +224,7 @@ header>input {
 .cadastro-lista>hr {
     display: block;
     margin: auto;
-    width: 96%;
+    width: 100%;
     border: 1px solid #E7E7E7;
 }
 
@@ -241,8 +257,12 @@ header>input {
     margin-bottom: 8px;
 }
 
-.status {
+.status-ativo, .status-inativo {
     text-align: center;
+}
+
+.status-inativo {
+    color: rgb(156, 156, 156);
 }
 
 .bx-menu {
@@ -291,7 +311,13 @@ header>input {
     }
 
     .perfil {
-        margin-left: 60px;
+        margin-left: 30px;
+    }
+
+    .perfil > a {
+        margin-left: 10px;
+        padding-left:  15px;
+        margin-right: 30px;
     }
 
     .nav-header {
@@ -311,5 +337,27 @@ header>input {
 
     .nav-header.open {
         left: 4%;
+    }
+}
+
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    nav, header , .cadastro-btn-label > a{
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .cadastros{
+        border: 0 solid white;
+        display: block;
+        width: 800px;
+        box-shadow: 0 0 0 0 white;
     }
 }

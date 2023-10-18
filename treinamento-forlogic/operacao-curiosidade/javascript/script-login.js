@@ -4,6 +4,7 @@ const password = document.getElementById('senha');
 var emailValido = false;
 var senhaValida = false;
 var nome = ""
+var foto = ""
 
 let nomeLogado = JSON.parse(localStorage.getItem('nomelogado') || '[]')
 let listaUsuarios = JSON.parse(localStorage.getItem('listausuario') || '[]')
@@ -69,6 +70,7 @@ const validateInputs = () => {
                 emailValido = true;
                 senhaValida = true;
                 nome = listaUsuarios[i].nomeCompletoCad
+                foto = listaUsuarios[i].fotoCad
                 break;
             } else {
                 setError(password, 'Senha errada!')
@@ -86,7 +88,8 @@ function logar() {
 
         // Em seguida, adicione os dados desejados à chave "nomelogado"
         const nomeLogado = {
-            nomeCompleto: nome
+            nomeCompleto: nome,
+            fotoCad: foto
         };
 
         // Armazene nomeLogado no Local Storage

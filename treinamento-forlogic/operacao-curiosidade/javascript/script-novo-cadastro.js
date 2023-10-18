@@ -9,10 +9,17 @@ let outras = document.getElementById('outras')
 let interesses = document.getElementById('interesses')
 let sentimentos = document.getElementById('sentimentos')
 let valores = document.getElementById('valores')
+let ativo = document.getElementById('checkbox')
 const form = document.getElementById('form');
 
 var nomeValido = false;
 var emailValido = false;
+
+const checkboxHelper = checkbox => {
+	const output = checkbox.checked ? true : false
+    checkbox.value = output;
+	console.log(output) // 1 || 0
+}
 
 let listaCadastrados = JSON.parse(localStorage.getItem("listacadastrados") || '[]')
 
@@ -161,7 +168,8 @@ function cadastrar() {
         outrasCad: outras.value,
         interessesCad: interesses.value,
         sentimentosCad: sentimentos.value,
-        valoresCad: valores.value
+        valoresCad: valores.value,
+        ativoCad: ativo.value
 
     })
 
