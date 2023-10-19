@@ -45,27 +45,27 @@ const validateInputs = () => {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
 
-    if(emailValue === '') {
-        setError(email, 'Email is required');
+    if (emailValue === '') {
+        setError(email, 'Email é um campo obrigatório!');
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
     } else {
-        for(var i = 0; i < listaUsuarios.length; i++){
-            if(emailValue == listaUsuarios[i].emailCad){
+        for (var i = 0; i < listaUsuarios.length; i++) {
+            if (emailValue == listaUsuarios[i].emailCad) {
                 setSuccess(email)
                 break;
-            } else setError(email,'Esse email nao esta cadastrado');
+            } else setError(email, 'Esse email nao esta cadastrado');
         }
     }
 
-    if(passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8 ) {
-        setError(password, 'Password must be at least 8 character.')
+    if (passwordValue === '') {
+        setError(password, 'Senha é um campo obrigatório!');
+    } else if (passwordValue.length < 8) {
+        setError(password, 'A senha precisa de no mínimo de 8 letras!')
     } else {
-        for(var i = 0; i < listaUsuarios.length; i++) {
+        for (var i = 0; i < listaUsuarios.length; i++) {
             console.log(listaUsuarios[i].nomeCompletoCad)
-            if((emailValue == listaUsuarios[i].emailCad) && (passwordValue == listaUsuarios[i].senhaCad)){
+            if ((emailValue == listaUsuarios[i].emailCad) && (passwordValue == listaUsuarios[i].senhaCad)) {
                 setSuccess(password)
                 emailValido = true;
                 senhaValida = true;

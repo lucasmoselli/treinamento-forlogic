@@ -18,10 +18,10 @@ var fotoCad = foto.value
 inputFoto.onchange = evt => {
     const [file] = inputFoto.files
     if (file) {
-      foto.src = URL.createObjectURL(file)
-      console.log(foto.src)
+        foto.src = URL.createObjectURL(file)
+        console.log(foto.src)
     }
-  }
+}
 
 
 let listaUsuarios = JSON.parse(localStorage.getItem("listausuario") || '[]')
@@ -71,28 +71,26 @@ const validateInputs = () => {
     const password2Value = password2.value.trim();
 
     if (usernameValue === '') {
-        setError(username, 'Username is required');
+        setError(username, 'Nome é um campo obrigatório!');
     } else {
         setSuccess(username);
         nomeValido = true;
     }
 
     if (emailValue === '') {
-        setError(email, 'Email is required');
+        setError(email, 'Email é um campo obrigatório!');
     } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
+        setError(email, 'Digite um e-mail válido!');
     } else {
 
-        for (var i = 0; i < listaUsuarios.length; i++) {
+        for (var i = 0; i < listaUsuarios.length || i <= listaUsuarios.length; i++) {
             if (listaUsuarios.length == 0) {
                 setSuccess(email)
                 emailValido = true
-                console.log('teste')
             }
 
             else if (emailValue == listaUsuarios[i].emailCad) {
-                console.log('teste ')
-                setError(email, 'Esse email ja esta cadastrado')
+                setError(email, 'Esse email já está cadastrado!')
                 break;
             }
             else {
@@ -102,26 +100,24 @@ const validateInputs = () => {
         }
     }
     if (passwordValue === '') {
-        setError(password, 'Password is required');
+        setError(password, 'Senha é um campo obrigatório!');
     } else if (passwordValue.length < 8) {
-        setError(password, 'Password must be at least 8 character.')
+        setError(password, 'A senha precisa de no mínimo de 8 letras!')
     } else {
         setSuccess(password);
         senhaValida = true;
     }
 
     if (password2Value === '') {
-        setError(password2, 'Please confirm your password');
+        setError(password2, 'Confirmar senha é um campo obrigatório!');
     } else if (password2Value !== passwordValue) {
-        setError(password2, "Passwords doesn't match");
+        setError(password2, "As senhas não batem!");
     } else {
         setSuccess(password2);
         senha2Valida = true
     }
 
 };
-
-console.log(listaUsuarios)
 
 function cadastrar() {
 
