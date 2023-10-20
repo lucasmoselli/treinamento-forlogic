@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+nav {
+    width: 420px;
+    min-height: 100vh;
+    border-right: 2px solid #e5e5e5;
+    background-color: white;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 85%;
+    height: 60px;
+    background-color: #EFF4FC;
+    margin-bottom: 30px;
+    font-size: 13px;
+    box-shadow: 2px 2px 2px 2px #d9e8ff;
+}
+
+.home-logo>span {
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 10px;
+
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.nav-links>a>span {
+    margin-right: 10px;
+    color: gray;
+    margin-left: 10px;
+}
+
+.nav-links>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+}
+
+.nav-links>a:hover {
+    transform: translate(3px, 3px);
+}
+
+nav>hr {
+    width: 85%;
+    border: 1px solid #E7E7E7;
+    margin-left: 10px;
+}
+
+.principal {
+    width: 80%;
+    background-color: #F5F5F5;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 97%;
+    height: 62px;
+    background-color: #EDEDED;
+    margin-top: 20px;
+    box-shadow: 0 0 2px 1px gray;
+}
+
+header>input {
+    width: 40%;
+    min-width: 100px;
+    height: 28px;
+    margin-left: 10px;
+    background-color: #F5F5F5;
+    border: 0 solid;
+    padding-left: 5px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.fakeimg {
+    background-color: darkgray;
+    width: 43px;
+    min-width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+.fakeimg:hover {
+    border-radius: 10px;
+}
+
+.perfil>a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid gray;
+    height: 30px;
+}
+
+.perfil>p {
+    min-width: 100px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+main {
+    margin-bottom: 30px;
+}
+
+.cadastros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 97%;
+    min-height: 600px;
+    height: 30%;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 0 2px 1px gray;
+}
+
+.cadastros>div>h3 {
+    color: grey;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.cadastros-label {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.cadastros>.cadastro-lista>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    transition: 0.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.cadastros>.cadastro-lista {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    height: 400px;
+}
+
+.cadastros> .cadastro-lista>div:first-child {
+    border-top: 2px solid #E7E7E7;
+}
+
+.cadastros>.cadastro-lista>div:hover {
+    background-color: #EFF4FC;
+}
+
+
+.cadastros>.cadastro-lista>div>p {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 20%;
+}
+
+.cadastros>.cadastro-lista>div>p:last-child {
+
+    text-align: right;
+}
+
+.cadastro-lista>hr {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border: 1px solid #E7E7E7;
+}
+
+
+.cadastro-btn-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cadastro-btn {
+    height: 40px;
+    width: 18%;
+    background-color: #61a057;
+    color: white;
+    font-weight: bold;
+    border: 0px solid;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-right: 25px;
+    min-width: 150px;
+}
+
+.cadastros-label {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.cadastros-value {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #E7E7E7;
+
+}
+
+.status-inativo {
+    color: rgb(156, 156, 156);
+}
+
+
+
+.bx-menu {
+    display: none;
+}
+
+.nav-header {
+    display: none;
+}
+
+#paginate .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+}
+
+#paginate .controls div {
+    cursor: pointer;
+
+    /* border: 1px solid #eee; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14;
+}
+
+#paginate .controls div:not(.numbers),
+#paginate .controls div.numbers div{
+    width: 40px;
+    height: 40px;
+}
+
+
+@media screen and (max-width: 850px) {
+    .wrapper {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        margin: 0;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .principal {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .cadastros>div>p {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 23%;
+    }
+
+    .cadastros {
+        min-height: 380px;
+        max-height: 100%;
+    }
+
+    .cadastros > .cadastro-lista {
+        height: 100%;
+        min-height: 525px;
+    }
+
+    .bx-menu {
+        display: block;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    .bx-menu:hover {
+        animation: tilt-shaking 0.5s infinite;
+
+    }
+
+    .bx-menu:hover > span{
+        color: black;
+        transition: 0.5s;
+    }
+
+    @keyframes tilt-shaking {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(2deg); }
+        50% { transform: rotate(0eg); }
+        75% { transform: rotate(-2deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+    .bx-menu>span {
+        font-size: 40px;
+        color: gray;
+    }
+
+    .perfil {
+        margin-left: 30px;
+    }
+    
+    .perfil > a {
+        margin-left: 10px;
+        padding-left:  15px;
+    }
+
+    .nav-header {
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: -100%;
+        height: 17vh;
+        width: 150px;
+        z-index: 2;
+        border-radius: 20px;
+        transition: all .5s ease;
+        background-color: #EDEDED;
+        box-shadow: 0px 0px 5px 2px gray;
+
+    }
+
+    .nav-header.open {
+        left: 5%;
+    }
+    
+    .nav-links a span{
+        color: rgb(54, 54, 54);
+    }
+
+    .status{
+        text-align: right;
+    }
+}

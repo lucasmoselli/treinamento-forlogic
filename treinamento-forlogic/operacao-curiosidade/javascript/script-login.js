@@ -4,12 +4,9 @@ const password = document.getElementById('senha');
 var emailValido = false;
 var senhaValida = false;
 var nome = ""
-var foto = ""
 
 let nomeLogado = JSON.parse(localStorage.getItem('nomelogado') || '[]')
 let listaUsuarios = JSON.parse(localStorage.getItem('listausuario') || '[]')
-
-
 
 form.addEventListener('submit', e => {
     e.preventDefault();
@@ -47,34 +44,50 @@ const validateInputs = () => {
 
     if (emailValue === '') {
         setError(email, 'Email é um campo obrigatório!');
+        emailValido = false
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Provide a valid email address');
+        emailValido = false
     } else {
-        for (var i = 0; i < listaUsuarios.length; i++) {
-            if (emailValue == listaUsuarios[i].emailCad) {
-                setSuccess(email)
-                break;
-            } else setError(email, 'Esse email nao esta cadastrado');
+        if(listaUsuarios.length!=0) {
+            for (var i = 0; i < listaUsuarios.length; i++) {
+                if (emailValue == listaUsuarios[i].emailCad) {
+                    setSuccess(email)
+                    break;
+                } else {
+                    setError(email, 'Esse email não está cadastrado!');
+                    emailValido = false
+                }
+            }
+        } else {
+            setError(email, 'Esse email não está cadastrado!')
+            emailValido = false
         }
     }
 
     if (passwordValue === '') {
         setError(password, 'Senha é um campo obrigatório!');
+        senhaValida = false
     } else if (passwordValue.length < 8) {
         setError(password, 'A senha precisa de no mínimo de 8 letras!')
+        senhaValida = false
     } else {
-        for (var i = 0; i < listaUsuarios.length; i++) {
-            console.log(listaUsuarios[i].nomeCompletoCad)
-            if ((emailValue == listaUsuarios[i].emailCad) && (passwordValue == listaUsuarios[i].senhaCad)) {
-                setSuccess(password)
-                emailValido = true;
-                senhaValida = true;
-                nome = listaUsuarios[i].nomeCompletoCad
-                foto = listaUsuarios[i].fotoCad
-                break;
-            } else {
-                setError(password, 'Senha errada!')
+        if(listaUsuarios.length!=0) {
+            for (var i = 0; i < listaUsuarios.length; i++) {
+                if ((emailValue == listaUsuarios[i].emailCad) && (passwordValue == listaUsuarios[i].senhaCad)) {
+                    setSuccess(password)
+                    emailValido = true;
+                    senhaValida = true;
+                    nome = listaUsuarios[i].nomeCompletoCad
+                    break;
+                } else {
+                    setError(password, 'Senha errada!')
+                    senhaValida = false
+                }
             }
+        } else {
+            setError(password, 'Senha Errada!')
+            senhaValida = false
         }
     }
 
@@ -89,7 +102,6 @@ function logar() {
         // Em seguida, adicione os dados desejados à chave "nomelogado"
         const nomeLogado = {
             nomeCompleto: nome,
-            fotoCad: foto
         };
 
         // Armazene nomeLogado no Local Storage

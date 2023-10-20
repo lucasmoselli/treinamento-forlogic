@@ -83,6 +83,7 @@ body{
 .input-control {
     display: flex;
     justify-content: center;
+    margin-right: 50px;
     
 }
 
@@ -115,6 +116,11 @@ body{
     font-weight: bold;
     border-color: black;
     margin-top: 35px;
+    transition: 0.5s;
+}
+
+.registrar-btn:hover {
+    background-color: rgb(40, 40, 40);
 }
 
 .input-control.success input {

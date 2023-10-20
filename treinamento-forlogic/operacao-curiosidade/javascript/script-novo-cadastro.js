@@ -14,6 +14,12 @@ const form = document.getElementById('form');
 
 var nomeValido = false;
 var emailValido = false;
+var idadeValida = false;
+var enderecoValido = false;
+var outrasValido = false;
+var interessesValido = false;
+var sentimentosValido = false;
+var valoresValido = false;
 
 const checkboxHelper = checkbox => {
 	const output = checkbox.checked ? true : false
@@ -27,7 +33,6 @@ let listaCadastrados = JSON.parse(localStorage.getItem("listacadastrados") || '[
 let nomesLogado = JSON.parse(localStorage.getItem('nomelogado') || '[]')
 
 var nomeHeader = nomesLogado.nomeCompleto
-console.log(nome)
 
 perfilHeader.innerHTML = `<div class="fakeimg"></div>
                         <p>${nomeHeader}</p>
@@ -43,7 +48,7 @@ form.addEventListener('submit', e => {
 
     validateInputs();
 
-    if (nomeValido && emailValido) {
+    if (nomeValido && emailValido && idadeValida && enderecoValido && outrasValido && interessesValido && sentimentosValido && valoresValido) {
         console.log('teste')
         cadastrar()
         setTimeout(() => {
@@ -90,70 +95,87 @@ const validateInputs = () => {
 
     if (usernameValue === '') {
         setError(nome, 'Nome é um campo obrigatório!');
+        nomeValido = false;
     } else {
         setSuccess(nome);
-        nomeValido = true
+        nomeValido = true;
     }
 
     console.log(listaCadastrados)
     if (emailValue === '') {
         setError(email, 'E-mail é um campo obrigatório!');
+        emailValido = false;
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Digite um e-mail válido!');
+        emailValido = false;
     } else {
-        for (var i = 0; i < listaCadastrados.length; i++) {
-            if (listaCadastrados.length == 0) {
-                setSuccess(email)
-                emailValido = true
+        if(listaCadastrados.length!=0){
+            for (var i = 0; i < listaCadastrados.length; i++) {
+                if (emailValue == listaCadastrados[i].emailCad) {
+                    setError(email, 'Esse email já esta cadastrado!')
+                    emailValido = false;
+                    break;
+                }
+                else {
+                    setSuccess(email)
+                    emailValido = true
+                }
             }
-
-            else if (emailValue == listaCadastrados[i].emailCad) {
-                setError(email, 'Esse email já esta cadastrado!')
-                break;
-            }
-            else {
-                setSuccess(email)
-                emailValido = true
+        } else {
+            setSuccess(email)
+            emailValido = true
             }
         }
-    }
+    
     if (idadeValue === '') {
         setError(idade, 'Idade é um campo obrigatório!');
-    } else if (idadeValue.value > 18 && idadeValue.value < 100) {
+        idadeValida = false;
+    } else if (Number(idadeValue) > 18 && Number(idadeValue) < 100) {
         setError(idade, 'Idade entre 18 e 100 anos!')
+        idadeValida = false;
     } else {
         setSuccess(idade);
+        idadeValida = true;
     }
 
     if (enderecoValue === '') {
         setError(endereco, 'Endereço é um campo obrigatório!');
+        enderecoValido = false
     } else {
         setSuccess(endereco);
+        enderecoValido = true
     }
 
     if (outrasValue === '') {
         setError(outras, 'Outras informações é um campo obrigatório!');
+        outrasValido = false;
     } else {
         setSuccess(outras);
+        outrasValido = true;
     }
 
     if (interessesValue === '') {
         setError(interesses, 'Interesses é um campo obrigatório!');
+        interessesValido = false;
     } else {
         setSuccess(interesses);
+        interessesValido = true;
     }
 
     if (sentimentosValue === '') {
-        console.log(sentimentosValue === '')
         setError(sentimentos, 'Sentimentos é um campo obrigatório!');
+        sentimentosValido = false;
     } else {
         setSuccess(sentimentos);
+        sentimentosValido = true;
     }
 
     if (valoresValue === '') {
         setError(valores, 'Valores é um campo obrigatório!');
+        valoresValido = false;
     } else {
         setSuccess(valores);
+        valoresValido = true;
     }
 };
 

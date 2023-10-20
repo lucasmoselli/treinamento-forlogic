@@ -3,7 +3,6 @@
     padding: 0;
 }
 
-
 body{
     width: 100%;
     height: 100vh;
@@ -27,32 +26,27 @@ body{
 		background-position: 0% 50%;
 	}
 }
-
 .wrapper {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    
 }
 
-.registrar {
-    min-width: 500px;
-    width: 50%;
-    height: 700px;
+.login {
+    height: 543px;
+    width: 569px;
+    border: 2px solid black;
     background-color: white;
-    box-shadow: 0 0 2px 2px black;
-}
-
-.registrar > h1 {
-    text-align: center;
-    margin-bottom: 10px;
+    box-shadow: 1px 1px 5px 1px black;
 }
 
 .oc-logo {
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 163px;
     height: 163px;
     text-align: center;
@@ -70,51 +64,43 @@ body{
     font-size: 13px;
 }
 
+.login>form {
 
-.input-control label {
-    width: 20%;
-    text-align: right;
-    transform: translate(0, 20px);
-    margin-right: 10px;
-}
-
-
-
-.input-control {
     display: flex;
-    justify-content: center;
-    
-}
-
-.input-control input {
-    width: 300px;
-    height: 40px;
-    margin-top: 10px;
-    margin-bottom: 17px;
-    padding-left: 10px;
-}
-
-.input-control input:nth-last-child(1){
-    margin-bottom: 50px;
-}
-
-
-.input-control input:focus {
-    outline: 0;
-}
-
-.registrar-btn{
-    display: block;
+    flex-direction: column;
     margin: auto;
-    width: 80%;
-    max-width: 450px;
+    width: 70%;
+
+}
+
+.login>form>.input-control>.input-login {
+    margin-bottom: 30px;
+    height: 45px;
+    padding-left: 20px;
+    width: 94%;
+}
+
+.entrar-btn{
+    width: 100%;
     height: 45px;
     background-color: black;
     color: white;
     border-radius: 5px;
     font-weight: bold;
     border-color: black;
-    margin-top: 35px;
+    transition: 0.5s;
+}
+
+.entrar-btn:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+input.control input {
+    border: 2px solid black
 }
 
 .input-control.success input {
@@ -123,14 +109,22 @@ body{
 
 .input-control.error input {
     border: 2px solid #ff3860;
-    
 }
 
 .input-control .error {
-    position: absolute;
     color: #ff3860;
-    font-size: 15px;
+    font-size: 12px;
     height: 13px;
-    width: 230px;
-    transform: translate(15px, 55px)
+    transform: translate(0, -23px)
+}
+
+.register {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register a {
+    text-decoration: none;
+    color: black;
 }

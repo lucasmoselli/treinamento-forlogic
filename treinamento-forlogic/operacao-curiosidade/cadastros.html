@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-cadastro.css">
+    <link rel="stylesheet" href="css/style-cadastro.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <title>Cadastros</title>
 </head>
 
@@ -52,7 +53,7 @@
                     <a href="login.html">Sair</a>
                 </div>
             </header>
-            <main class="principal-conteudo">
+            <main class="principal-conteudo" id="paginate">
                 <div class="cadastros">
                     <div class="cadastro-btn-label">
                         <h3>Cadastros</h3>
@@ -64,13 +65,22 @@
                         <p>E-mail</p>
                         <p class="status">Status</p>
                     </div>
-                    <hr>
                     <div class="cadastro-lista" id="cadastro-lista">
+                    </div>
+                    <div class="controls">
+                        <div class="first">&#171;</div>
+                        <div class="prev"><</div>
+                        <div class="numbers">
+                            <div>1</div>
+                        </div>
+                        <div class="next">></div>
+                        <div class="last">&#187;</div>
                     </div>
                 </div>
             </main>
         </div>
         <script src="javascript/script-cadastro.js"></script>
+        <script src="javascript/listagem.js"></script>
 </body>
 
 </html>
