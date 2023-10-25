@@ -1,0 +1,189 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+.cadastros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 97%;
+    min-height: 600px;
+    height: 30%;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 0 2px 1px gray;
+}
+
+.cadastros>div>h3 {
+    color: grey;
+    padding-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.cadastros-label {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.cadastros>.cadastro-lista>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    transition: 0.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.cadastros>.cadastro-lista {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+    min-height: 400px;
+    height: 100%;
+}
+
+.cadastros> .cadastro-lista>div:first-child {
+    border-top: 2px solid #E7E7E7;
+}
+
+.cadastros>.cadastro-lista>div:hover {
+    background-color: #EFF4FC;
+}
+
+
+.cadastros>.cadastro-lista>div>p {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 20%;
+}
+
+.cadastros>.cadastro-lista>div>p:last-child {
+
+    text-align: right;
+}
+
+
+.cadastro-btn-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cadastro-btn {
+    height: 40px;
+    width: 18%;
+    background-color: #5763a0;
+    color: white;
+    font-weight: bold;
+    border: 0px solid;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-right: 25px;
+    min-width: 150px;
+}
+
+.cadastros-label {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.cadastros-value {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #E7E7E7;
+
+}
+
+.status-inativo {
+    color: rgb(156, 156, 156);
+}
+
+
+
+.bx-menu {
+    display: none;
+}
+
+.nav-header {
+    display: none;
+}
+
+#paginate .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 8px;
+}
+
+#paginate .controls div {
+    cursor: pointer;
+
+    /* border: 1px solid #eee; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14;
+}
+
+#paginate .controls div:not(.numbers),
+#paginate .controls div.numbers div{
+    width: 40px;
+    height: 40px;
+}
+
+#procurarNome {
+    width: 200px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 30px;
+    padding-left: 10px;
+    outline: 0;
+}
+
+@media print {
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    nav, header , .cadastro-btn-label > a{
+        display: none;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .cadastros{
+        border: 0 solid white;
+        display: block;
+        width: 800px;
+        box-shadow: 0 0 0 0 white;
+    }
+
+    #paginate .controls {
+        display: none;
+    }
+
+    #procurarNome {
+        display: none;
+    }
+}

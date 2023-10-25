@@ -110,7 +110,7 @@ function logar() {
         console.log(nomeLogado);
         console.log(listaUsuarios);
         setTimeout(() => {
-            window.location.href = "home.html";
+            window.location.href = "src/home/home.html";
         }, 3000);
     }
 }

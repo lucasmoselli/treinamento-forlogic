@@ -25,7 +25,7 @@ form.addEventListener('submit', e => {
     if (nomeValido && emailValido && senhaValida && senha2Valida) {
         cadastrar()
         setTimeout(() => {
-            window.location.href = "./login.html"
+            window.location.href = "./../../login.html"
         }, 3000)
     }
 });

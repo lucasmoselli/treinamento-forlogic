@@ -3,22 +3,28 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+    transition: opacity 0.3s;
+}
+
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #F5F5F5;
 }
 
-.wrapper{
+.wrapper {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
 }
 
-nav{
-    width: 420px;
-    height: 100vh;
+nav {
+    position: fixed;
+    width: 421px;
+    min-height: 100vh;
     border-right: 2px solid #e5e5e5;
     background-color: white;
 }
@@ -44,7 +50,7 @@ nav{
 }
 
 
-.nav-links{
+.nav-links {
     display: flex;
     align-items: center;
     margin-left: 10px;
@@ -52,10 +58,11 @@ nav{
     margin-bottom: 10px;
 }
 
-.nav-links > a > span {
+.nav-links>a>span {
     margin-right: 10px;
     color: gray;
     margin-left: 10px;
+
 }
 
 .nav-links>a {
@@ -68,8 +75,16 @@ nav{
 
 .nav-links>a:hover {
     transform: translate(3px, 3px);
+    color: black;
 }
-nav > hr{
+
+.nav-links>a:hover::after{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+}
+
+nav>hr {
     width: 85%;
     border: 1px solid #E7E7E7;
     margin-left: 10px;
@@ -78,6 +93,7 @@ nav > hr{
 .principal {
     width: 80%;
     background-color: #F5F5F5;
+    margin-left: 421px;
 }
 
 header {
@@ -109,7 +125,10 @@ header>input {
 }
 
 .fakeimg {
-    background-color: darkgray;
+    background-image: url("../favicon/b72a1cfe.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 43px;
     min-width: 43px;
     height: 43px;
@@ -138,69 +157,9 @@ header>input {
 .perfil>p {
     min-width: 100px;
 }
-.cadastrados {
-    margin: auto;
-    height: 600px;
-    background-color: white;
-    width: 97%;
-    margin-top: 30px;
-    box-shadow: 0 0 2px 1px gray;
-}
 
-.cadastrados > h3 {
-    color: grey;
-    padding-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 30px;
-}
 
-.cadastrados > hr {
-    margin: auto;
-    width: 92%;
-    border: 1px solid #E7E7E7;
-}
-
-.cadastrados > p {
-    color: gray;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 30%;
-}
-
-.cadastrados > a {
-    text-decoration: none;
-    height: 20px;
-}
-
-.cadastrados > a > p {
-    text-decoration: none;
-    color: black;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 30%;
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-}
-
-.bx-menu {
-    display: none;
-}
-
-.nav-header {
-    display: none;
-}
-
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
     .wrapper {
         width: 100%;
     }
@@ -208,28 +167,52 @@ header>input {
     nav {
         display: none;
     }
-    
-    header {
-        margin: auto;
-        width: 100%;
-        justify-content: flex-start;
-    }
 
-    .nav-header{
+    header {
         margin: 0;
+        position: fixed;
+        top: 0;
         width: 100%;
-        justify-content: flex-start;
+        justify-content: space-between;
+        z-index: 1;
     }
 
     .principal {
         width: 100%;
-        margin-top: 0;
+        margin-top: 65px;
+        margin-left:0;
     }
 
-    .cadastros > div > p {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cards > div {
+        max-width: 400px;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .cards > div:last-child{
+        margin-bottom: 0;
+    }
+
+    .cadastros {
+        min-height: 380px;
+        max-height: 100%;
+    }
+
+    .cadastros>div>p {
         margin-left: 10px;
         margin-right: 10px;
         width: 23%;
+    }
+
+    .cadastros > .cadastro-lista {
+        height: 100%;
+        min-height: 300px;
     }
 
     .bx-menu {
@@ -255,7 +238,7 @@ header>input {
         100% { transform: rotate(0deg); }
       }
 
-    .bx-menu > span {
+    .bx-menu>span {
         font-size: 40px;
         color: gray;
     }
@@ -264,33 +247,42 @@ header>input {
         margin-left: 30px;
     }
 
-    
     .perfil > a {
         margin-left: 10px;
-        padding-left:  7px;
+        padding-left: 7px;
         margin-right: 30px;
     }
 
+    .cadastros-value > p {
+        margin: 0 10px;
+    }
+
     .nav-header {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         position: absolute;
-        top: 10%;
+        top: 90%;
         left: -100%;
-        height: 17vh;
-        width: 150px;
+        height: 20vh;
+        width: 170px;
         z-index: 2;
-        border-radius: 20px;
+        border-radius: 10px;
         transition: all .5s ease;
         background-color: #EDEDED;
-        box-shadow: 0px 0px 5px 2px gray;
+        box-shadow: 0px 0px 10px 10px rgb(0, 0, 0);
 
     }
+
+    .nav-header.open {
+        left: 4%;
+    }  
 
     .nav-links a span{
         color: rgb(54, 54, 54);
-    }
-    
-    .nav-header.open {
-        left: 4%;
+    } 
+
+    .status{
+        text-align: right;
     }
 }
